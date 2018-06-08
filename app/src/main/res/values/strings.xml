@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Guardian LGBT News</string>
+    <string name="empty_list">No news items found.</string>
+    <string name="no_network_access">No internet connection.</string>
+</resources>

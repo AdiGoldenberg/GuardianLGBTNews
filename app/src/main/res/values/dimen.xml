@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_dividers_height">4dp</dimen>
+    <dimen name="margin_around_items">8dp</dimen>
+    <dimen name="margin_between_detailes">16dp</dimen>
+    <dimen name="margin_below_title">8dp</dimen>
+</resources>
