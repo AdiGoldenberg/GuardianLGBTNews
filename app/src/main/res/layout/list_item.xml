@@ -13,11 +13,19 @@
         tools:text="Title" />
 
     <TextView
-        android:id="@+id/section"
+        android:id="@+id/author"
         style="@style/detailes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/title"
+        tools:text="Author" />
+
+    <TextView
+        android:id="@+id/section"
+        style="@style/detailes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/author"
         tools:text="Society" />
 
     <TextView
@@ -25,7 +33,7 @@
         style="@style/detailes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
+        android:layout_below="@id/author"
         android:layout_marginStart="@dimen/margin_between_detailes"
         android:layout_toEndOf="@id/section"
         tools:text="2018-06-08" />

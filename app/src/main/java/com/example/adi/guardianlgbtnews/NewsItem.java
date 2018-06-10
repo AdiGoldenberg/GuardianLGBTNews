@@ -8,14 +8,16 @@ public class NewsItem {
     //States
     private String mTitle;
     private String mSection;
+    private String mAuthor;
     private String mDate;
     private String mUrl;
 
     // Constructor
-    public NewsItem(String title, String section, String url, String date) {
+    public NewsItem(String title, String section, String url, String author, String date) {
         mTitle = title;
         mSection = section;
         mUrl = url;
+        mAuthor = author;
         mDate = date;
     }
 
@@ -31,6 +33,8 @@ public class NewsItem {
     public String getUrl() {
         return mUrl;
     }
+
+    public String getAuthor() {return mAuthor;}
 
     public String getDate() {
         return mDate;

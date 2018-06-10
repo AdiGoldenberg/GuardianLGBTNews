@@ -47,6 +47,10 @@ public class NewsItemsAdapter extends ArrayAdapter<NewsItem> {
         TextView titleText = (TextView) convertView.findViewById(R.id.title);
         titleText.setText(currentItem.getTitle());
 
+        // Update the author
+        TextView authorText = (TextView) convertView.findViewById(R.id.author);
+        authorText.setText(currentItem.getAuthor());
+
         // Update the section
         TextView sectionText = (TextView) convertView.findViewById(R.id.section);
         sectionText.setText(currentItem.getSection());

@@ -87,14 +87,27 @@ public final class QueryUtils {
                     JSONObject currentItem = resultsArray.getJSONObject(i);
                     // Get “webTitle” for the item's title
                     String currentTitle = currentItem.getString("webTitle");
+                    // If it contains the author's name - omit it
+                    if (currentTitle.contains(" | ")){
+                        currentTitle = currentTitle.substring(0, currentTitle.indexOf(" | "));
+                    }
                     // Get “sectionName” for the item's section
                     String currentSection = currentItem.getString("sectionName");
                     // Get “webUrl” for the item's section
                     String currentUrl = currentItem.getString("webUrl");
-                    // Get “webPublicationDate” for the item's publishing date
+                    // Get “byline” for the item's author name (from the "fields" JSONObject).
+                    // If missing set to "".
+                    String currentAuthor = currentItem.getJSONObject("fields").getString("byline");
+                    if (currentAuthor == null){
+                        currentAuthor = "";
+                    }
+                    // Get “webPublicationDate” for the item's publishing date. If missing set to "".
                     String currentDate = currentItem.getString("webPublicationDate").substring(0, 10);
+                    if (currentDate == null){
+                        currentDate = "";
+                    }
                     // Create a NewsItem java object from the data and add it to the list
-                    newsItems.add(i, new NewsItem(currentTitle, currentSection, currentUrl, currentDate));
+                    newsItems.add(i, new NewsItem(currentTitle, currentSection, currentUrl, currentAuthor, currentDate));
                 }
             }
         } catch (JSONException e) {
